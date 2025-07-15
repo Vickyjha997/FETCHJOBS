@@ -8,11 +8,13 @@ function App() {
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
+    // Fetch Jobicy logs
     fetch(`${API_BASE_URL}/logs`)
       .then((res) => res.json())
       .then((data) => setJobLogs(data))
       .catch((err) => console.error("Job logs fetch error:", err));
 
+    // Fetch HigherEdJobs logs
     fetch(`${API_BASE_URL}/articles/logs`)
       .then((res) => res.json())
       .then((data) => setArticleLogs(data))
