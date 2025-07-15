@@ -5,17 +5,19 @@ function App() {
   const [jobLogs, setJobLogs] = useState([]);
   const [articleLogs, setArticleLogs] = useState([]);
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
   useEffect(() => {
-    fetch("http://localhost:3000/logs")
+    fetch(`${API_BASE_URL}/logs`)
       .then((res) => res.json())
       .then((data) => setJobLogs(data))
       .catch((err) => console.error("Job logs fetch error:", err));
 
-    fetch("http://localhost:3000/articles/logs")
+    fetch(`${API_BASE_URL}/articles/logs`)
       .then((res) => res.json())
       .then((data) => setArticleLogs(data))
       .catch((err) => console.error("Article logs fetch error:", err));
-  }, []);
+  }, [API_BASE_URL]);
 
   return (
     <div style={{ padding: "20px" }}>
