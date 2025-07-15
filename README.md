@@ -67,12 +67,58 @@ npm start
 ```
 
 ### Frontend Setup
+## .env
+- VITE_API_BASE_URL=https://03cc0e87b365.ngrok-free.app
+
+  To generate
+  ```bash
+  npm i ngrok -g
+  ngrok http 3000
+  ```
+  You will get a Link 
+  
 
 ```bash
 cd ../client
 npm install
 npm run dev
 ```
+
+### 🌐 Vercel Deployment (Frontend Only)
+- The frontend is deployed on Vercel and connects to the backend via a remote API URL (like https://xyz.ngrok-free.app).
+
+## 🛠️ Environment Variables (Client)
+- Inside /client/.env:
+
+env
+Copy
+Edit
+- VITE_API_BASE_URL=https://your-ngrok-url-or-backend-api
+- 🔄 Steps to Deploy on Vercel
+  Push code to GitHub
+  Go to vercel.com
+  Import GitHub repo
+  Select client/ as Root Directory
+  Set env var VITE_API_BASE_URL
+
+## Deploy 🎉
+
+📊 Features
+- Imports Job feeds from Jobicy
+- Imports Articles from HigherEdJobs
+- Logs all imports: new, updated, failed, and reasons
+- Modular backend architecture
+- React dashboard showing logs in table
+
+<img width="1366" height="768" alt="Screenshot (180)" src="https://github.com/user-attachments/assets/8f3e9baa-869a-40c7-b8dc-1f790844bb9d" />
+
+
+
+- 🙋‍♂️ Author
+- Vicky Jha
+- GitHub: @Vickyjha997
+
+
 
 
 
