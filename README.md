@@ -113,7 +113,7 @@ Edit
 <img width="1366" height="768" alt="Screenshot (180)" src="https://github.com/user-attachments/assets/8f3e9baa-869a-40c7-b8dc-1f790844bb9d" />
 
 
-
+- VERCEL LINK : https://fetchjobs.vercel.app/
 - 🙋‍♂️ Author
 - Vicky Jha
 - GitHub: @Vickyjha997
